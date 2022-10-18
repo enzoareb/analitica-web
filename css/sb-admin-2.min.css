@@ -4515,6 +4515,8 @@ input[type=submit].btn-block {
     display: block
 }
 
+
+
 .navbar {
     position: relative;
     display: flex;
@@ -4534,6 +4536,7 @@ input[type=submit].btn-block {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between
+    
 }
 
 .navbar-brand {
