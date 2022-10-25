@@ -11525,7 +11525,7 @@ a:focus {
 
 .sidebar .nav-item .nav-link span {
     font-size: .65rem;
-    display: inline-block
+    display: block
 }
 
 .sidebar .nav-item.active .nav-link {
@@ -11572,7 +11572,7 @@ a:focus {
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
     padding: .5rem 1rem;
     margin: 0 .5rem;
-    display: inline-block;
+    display: block;
     color: #3a3b45;
     text-decoration: none;
     border-radius: .35rem;
@@ -11646,7 +11646,7 @@ a:focus {
 }
 
 .sidebar .sidebar-brand .sidebar-brand-icon i {
-    font-size: 2rem
+    font-size: 1.3rem
 }
 
 .sidebar .sidebar-brand .sidebar-brand-text {
@@ -11755,7 +11755,7 @@ a:focus {
     }
 
     .sidebar .sidebar-brand .sidebar-brand-icon i {
-        font-size: 2rem
+        font-size: 1.3rem
     }
 
     .sidebar .sidebar-brand .sidebar-brand-text {
@@ -11823,7 +11823,7 @@ a:focus {
     }
 
     .sidebar.toggled .sidebar-brand .sidebar-brand-icon i {
-        font-size: 2rem
+        font-size: 1.3rem
     }
 
     .sidebar.toggled .sidebar-brand .sidebar-brand-text {
@@ -12629,6 +12629,9 @@ html {
 .nav-home:hover{
     color: #fff;
 }
+
+
+
 
 
 
