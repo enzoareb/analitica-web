@@ -58,45 +58,24 @@
             <div class="sidebar-heading">
                 Filtros
             </div>
-            <li class="nav-item">
-                <a class="nav-link" href="ruido.html">
-                    <i class="bi bi-bar-chart"></i>
-                    <span>Ruido</span></a>
-            </li>
+            
 
-            <li class="nav-item">
-                <a class="nav-link" href="calidadaire.html">
-                    <i class="bi bi-bar-chart"></i>
-                    <span>Calidad de aire</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="temperatura.html">
-                    <i class="bi bi-bar-chart"></i>
-                    <span>Temperatura</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="humedad.html">
-                    <i class="bi bi-bar-chart"></i>
-                    <span>Humedad</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="ahorroenergetico.html">
-                    <i class="bi bi-bar-chart"></i>
-                    <span>Ahoro energetico</span></a>
-            </li>
+            
 
             <li class="nav-item">
                 <a class="nav-link" href="rendimientoAcademico.html">
-                    <i class="bi bi-bar-chart"></i>
+                    <i class="bi bi-bar-chart text-white"></i>
                     <span>Rendimiento academico</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="alumnos.html">
                     <i class="bi bi-bar-chart"></i>
                     <span>Alumnos</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ahorroenergetico.html">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>Ahoro energetico</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -134,36 +113,41 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    
-
-                    <!-- Content Row -->
-
-                    <!-- Content Row -->
+<!-- full card-->
+<div class="ful-card" id="fulCardBox">
+    <iframe id="fulCard"
+            src=""
+            frameborder="0" height="525" width="1025" allowtransparency></iframe>
+    <span onclick="closeCard()"><i class="bi bi-x-circle"></i></span>
+</div>
+<!-- cards -->
 
                     <div class="row">
 
                         <div class="col-xl-7 col-lg-6">
                             <div class="card shadow mb-4">
-                                <iframe
+                                <i class="fas fa-expand icon" onclick="openFulCard(0)"></i> 
+                                <iframe class="iframe"
                                 src="https://pp1.ath.cx:8443/public/question/214553bb-2e78-4250-ab2a-c8734ef0762d"
                                     
-                                    frameborder="0" height="600" allowtransparency></iframe>
+                                    frameborder="0" height="450" allowtransparency></iframe>
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-4">
                             <div class="card shadow mb-4">
-                                <iframe
+                                <i class="fas fa-expand icon" onclick="openFulCard(1)"></i> 
+                                <iframe class="iframe"
                                 src="https://pp1.ath.cx:8443/public/question/70de7875-e5d8-4134-b613-6da5c7e6e509"
                                    
-                                    frameborder="0" height="600" allowtransparency></iframe>
+                                    frameborder="0" height="450" allowtransparency></iframe>
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-4">
                             <div class="card shadow mb-4">
-                                <iframe
+                                <i class="fas fa-expand icon" onclick="openFulCard(2)"></i> 
+                                <iframe class="iframe"
                                     src="https://pp1.ath.cx:8443/public/question/62fb7df7-8e67-4e9b-ba05-275ca77b1c79"
-                                    frameborder="0" height="600" allowtransparency></iframe>
+                                    frameborder="0" height="450" allowtransparency></iframe>
                             </div>
                         </div>
 
@@ -197,7 +181,7 @@
         <img class="btn-back" src="img/btn-back.png">
     </a>
 
-
+    <script src="js/script.js"></script>
 </body>
 
 </html>

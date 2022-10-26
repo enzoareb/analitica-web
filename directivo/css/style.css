@@ -4500,14 +4500,14 @@ input[type=submit].btn-block {
     background-color: #000
 }
 
-.nav-fill .nav-item,
-.nav-fill>.nav-link {
+.nav-fill .nav-item .nav-home,
+.nav-fill>.nav-link,.nav-fill>.nav-home {
     flex: 1 1 auto;
     text-align: center
 }
 
-.nav-justified .nav-item,
-.nav-justified>.nav-link {
+.nav-justified .nav-item .nav-home,
+.nav-justified>.nav-link,.nav-justified>.nav-home {
     flex-basis: 0;
     flex-grow: 1;
     text-align: center
@@ -4565,7 +4565,7 @@ input[type=submit].btn-block {
     list-style: none
 }
 
-.navbar-nav .nav-link {
+.navbar-nav .nav-link .nav-home{
     padding-right: 0;
     padding-left: 0
 }
@@ -4642,7 +4642,7 @@ input[type=submit].btn-block {
         position: absolute
     }
 
-    .navbar-expand-sm .navbar-nav .nav-link {
+    .navbar-expand-sm .navbar-nav .nav-link .nav-home{
         padding-right: .5rem;
         padding-left: .5rem
     }
@@ -4697,7 +4697,7 @@ input[type=submit].btn-block {
         position: absolute
     }
 
-    .navbar-expand-md .navbar-nav .nav-link {
+    .navbar-expand-md .navbar-nav .nav-link .nav-home{
         padding-right: .5rem;
         padding-left: .5rem
     }
@@ -4752,7 +4752,7 @@ input[type=submit].btn-block {
         position: absolute
     }
 
-    .navbar-expand-lg .navbar-nav .nav-link {
+    .navbar-expand-lg .navbar-nav .nav-link .nav-home{
         padding-right: .5rem;
         padding-left: .5rem
     }
@@ -4807,7 +4807,7 @@ input[type=submit].btn-block {
         position: absolute
     }
 
-    .navbar-expand-xl .navbar-nav .nav-link {
+    .navbar-expand-xl .navbar-nav .nav-link .nav-home {
         padding-right: .5rem;
         padding-left: .5rem
     }
@@ -4858,7 +4858,7 @@ input[type=submit].btn-block {
     position: absolute
 }
 
-.navbar-expand .navbar-nav .nav-link {
+.navbar-expand .navbar-nav .nav-link .nav-home{
     padding-right: .5rem;
     padding-left: .5rem
 }
@@ -4997,6 +4997,48 @@ input[type=submit].btn-block {
     background-clip: border-box;
     border: 1px solid #e3e6f0;
     border-radius: .35rem
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card i{
+    width: 2rem;
+    height: 2rem;
+    font-size: 24px;
+    position: absolute;
+    top: 2.5%;
+    right: 0%;
+    color:  #4c5773;
+    cursor: pointer;
+    display: flex;
+    z-index: 80;
+    
+}
+.card i:hover{
+    color: #000;
+    width: 2.5rem;
+    font-size: 32px;
+}
+.ful-card{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+   
+}
+.ful-card span{
+    position: absolute;
+    top: 2%;
+    right: 7%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
 }
 
 .card>hr {
@@ -11329,13 +11371,13 @@ a:focus {
 
 
 
-.sidebar .nav-item .nav-link,
-.topbar .nav-item .nav-link {
+.sidebar .nav-item .nav-link .nav-home,
+.topbar .nav-item .nav-link .nav-home{
     position: relative
 }
 
-.sidebar .nav-item .nav-link .badge-counter,
-.topbar .nav-item .nav-link .badge-counter {
+.sidebar .nav-item .nav-link .badge-counter .nav-home,
+.topbar .nav-item .nav-link .badge-counter .nav-home{
     position: absolute;
     transform: scale(.7);
     transform-origin: top right;
@@ -11343,7 +11385,7 @@ a:focus {
     margin-top: -.25rem
 }
 
-.sidebar .nav-item .nav-link .img-profile,
+.sidebar .nav-item .nav-link .img-profile ,
 .topbar .nav-item .nav-link .img-profile {
     height: 2.5rem;
     width: 2.5rem
@@ -11382,7 +11424,7 @@ a:focus {
     margin: auto 1rem
 }
 
-.topbar .nav-item .nav-link {
+.topbar .nav-item .nav-link{
     height: 4.375rem;
     display: flex;
     align-items: center;
@@ -11522,6 +11564,7 @@ a:focus {
     padding: .75rem 1rem;
     width: 6.5rem
 }
+
 
 .sidebar .nav-item .nav-link span {
     font-size: .65rem;
@@ -12605,7 +12648,7 @@ body.sidebar-toggled footer.sticky-footer {
     text-align: center;
     font-size: 30px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, .3);
-    z-index: 10;
+    z-index: 90;
 }
 
 .btn-back:hover{
@@ -12622,16 +12665,18 @@ html {
 .nav-home {
     font-size: 1.2rem ;
     color: rgba(255, 255, 255, .8);
-    padding: .9rem 1rem
+    padding: .75rem 1rem;
+    
+    
+    
 }
-
 
 .nav-home:hover{
     color: #fff;
 }
 
-
-
-
-
-
+@media screen and (max-width:760px) {
+    .nav-home{
+        text-align: center;
+    }
+}
