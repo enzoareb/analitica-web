@@ -49,7 +49,6 @@
                     
                     <span>Home</span></a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -59,8 +58,8 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="ruido.html">
-                    <i class="bi bi-bar-chart"></i>
+                <a class="nav-link bold" href="ruido.html">
+                    <i class="bi bi-bar-chart bold"></i>
                     <span>Ruido</span></a>
             </li>
 
@@ -88,10 +87,11 @@
                     <span>Rendimiento academico</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link bold" href="alumnos.html">
-                    <i class="bi bi-bar-chart bold"></i>
+                <a class="nav-link" href="alumnos.html">
+                    <i class="bi bi-bar-chart"></i>
                     <span>Alumnos</span></a>
             </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -109,7 +109,7 @@
                 <nav class="navbar navbar-expand topbar mb-4 ">
 
                     <div class="ml-md-3">
-                        <span class="h4">Analitica de alumnos</span>
+                        <span class="h4">Mediciones de ruido</span>
                     </div>
                     
 
@@ -118,14 +118,14 @@
                         <button class="switch" id="switch">
                             <span><i class="fas fa-sun" ></i></span>
                             <span><i class="fas fa-moon"></i></span>
-                        </button>           
+                        </button>          
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
-                                <span class="mr-2 d-none d-lg-inline small">Padre</span>
-                                <img class="img-profile rounded-circle" src="img/avatarPadre.png" />
+                                <span class="mr-2 d-none d-lg-inline small">Representante</span>
+                                <img class="img-profile rounded-circle" src="img/avatarRepresentante.png" />
                             </a>
                         </li>
                     </ul>
@@ -136,59 +136,16 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- full card-->
-                    <div class="ful-card" id="fulCardBox">
-                        <iframe id="fulCard"
-                                src=""
-                                frameborder="0" height="525" width="1025" allowtransparency></iframe>
-                        <span onclick="closeCard()"><i class="bi bi-x-circle"></i></span>
-                    </div>
-                    <!-- cards -->
+                
+
+                    <!-- Content Row -->
+
+                    <!-- Content Row -->
 
                     <div class="row">
 
-                        <div class="col-xl-7 col-lg-6">
-                            <div class="card shadow mb-4">
-                                <i class="fas fa-expand icon" onclick="openFulCard(0)"></i>
-                                <iframe class="iframe"
-                                    src="https://pp1.ath.cx:8443/public/question/3bca1b9f-0526-4e1b-85ba-60a765de27e2"
-                                    frameborder="0" height="450" allowtransparency></iframe>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-4">
-                            <div class="card shadow mb-4">
-                                <i class="fas fa-expand icon" onclick="openFulCard(1)"></i>
-                                <iframe class="iframe"
-                                    src="https://pp1.ath.cx:8443/public/question/a5947831-7b1d-409c-9a1f-848cfb0bfed1"
-                                    frameborder="0" height="450" allowtransparency></iframe>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-4">
-                            <div class="card shadow mb-4">
-                                <i class="fas fa-expand icon" onclick="openFulCard(2)"></i>
-                                <iframe class="iframe"
-                                src="https://pp1.ath.cx:8443/public/question/d9b0fbe7-6ab3-40d7-b5c4-6823d2fd8db6"
-                                    
-                                    frameborder="0" height="450" allowtransparency></iframe>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-6">
-                            <div class="card shadow mb-4">
-                                <i class="fas fa-expand icon" onclick="openFulCard(3)"></i>
-                                <iframe class="iframe"
-                                src="https://pp1.ath.cx:8443/public/question/ae38a0e4-7d58-4102-bd80-607597c7d9fb"
-                                    
-                                    frameborder="0" height="450" allowtransparency></iframe>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-lg-6">
-                            <div class="card shadow mb-4">
-                                <i class="fas fa-expand icon" onclick="openFulCard(4)"></i>
-                                <iframe class="iframe"
-                                    src="https://pp1.ath.cx:8443/public/question/62fb7df7-8e67-4e9b-ba05-275ca77b1c79"
-                                    frameborder="0" height="450" allowtransparency></iframe>
-                            </div>
-                        </div>
+                        <!-- Area Chart -->
+
                     </div>
 
 
@@ -214,12 +171,12 @@
 
     </div>
     <!-- End of Page Wrapper -->
+    
     <a href="#wrapper" target="">
         <img class="btn-back" src="img/btn-back.png">
     </a>
 
     <script src="js/script.js"></script>
-
 </body>
 
 </html>
