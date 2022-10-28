@@ -88,8 +88,8 @@
                     <span>Rendimiento academico</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="alumnos.html">
-                    <i class="bi bi-bar-chart text-white"></i>
+                <a class="nav-link bold" href="alumnos.html">
+                    <i class="bi bi-bar-chart bold"></i>
                     <span>Alumnos</span></a>
             </li>
             <!-- Divider -->
@@ -106,13 +106,19 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 ">
-                    <div class="d-sm-inline-block  ml-md-3  ">
-                        <span class="mr-1 h4 mb-0 text-black ">Analitica de alumnos</span>
+                <nav class="navbar navbar-expand topbar mb-4 ">
+
+                    <div class="ml-md-3">
+                        <span class="h4">Analitica de alumnos</span>
                     </div>
+                    
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">            
+                    <ul class="navbar-nav ml-auto">
+                        <button class="switch" id="switch">
+                            <span><i class="fas fa-sun" ></i></span>
+                            <span><i class="fas fa-moon"></i></span>
+                        </button>           
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -194,7 +200,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Analitica - Grupo 4</span>
