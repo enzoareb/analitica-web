@@ -3,27 +3,20 @@ fullCard = document.getElementById("fulCard");
 var body = document.getElementById("page-top");
 const btnBack = document.getElementById("btn-back");
 
-function openFulCard(refId) {
-    //lista de elementos de la clase iframe
-    var iframes = document.getElementsByClassName("iframe");
-    //elemento de la lista pasado por parametro
-    var srcIframe = iframes[refId].getAttribute("src");
-    //cargo la url en la card a mostrar
-    fullCard.src = srcIframe;
-    //muestro full card 
-    fullCardBox.style.display = "flex";
-    //quito scroll a la pagina
-    body.style.position = "fixed";
-}
+////////////////evento close full card//////////////////////////////////
 
-function closeCard() {
+const btnClose = document.querySelector("#btnClose");
+
+btnClose.addEventListener('click', () => {
     //escondo full card
     fullCardBox.style.display = "none";
     //saco la url de la full card
     fullCard.src = "";
     //habilito scroll de la pagina
     body.style.position = "relative";
-}
+});
+
+////////////////evento boton contraste/////////////////////////////////
 
 const btnSwitch = document.querySelector("#switch");
 
@@ -37,7 +30,6 @@ btnSwitch.addEventListener('click', () => {
     } else {
         btnBack.src = "img/btn-back.png"
     }
-
 });
 
 const preferedColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -55,3 +47,20 @@ if (localStorage.getItem('theme') == 'dark') {
 } else {
     btnBack.src = "img/btn-back.png"
 }
+
+///////////evento full card///////////////////////////
+
+var buttons = document.getElementsByClassName("icon");
+
+for (let index = 0; index < buttons.length; index++) {
+    button = buttons[index];
+    button.addEventListener('click', () => {
+        var iframes = document.getElementsByClassName("iframe");
+        var srcIframe = iframes[index].getAttribute("src");
+        fullCard.src = srcIframe;
+        fullCardBox.style.display = "flex";
+        
+    });
+    
+}
+

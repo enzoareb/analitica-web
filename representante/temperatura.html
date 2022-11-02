@@ -34,7 +34,7 @@
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="bi bi-graph-up-arrow"></i>
-                    
+
                 </div>
                 <div class="sidebar-brand-text mx-3">Analitica</div>
             </a>
@@ -44,9 +44,9 @@
 
             <li class="nav-item">
                 <a class="nav-home" href="index.html">
-                    
+
                     <i class="bi bi-house"></i>
-                    
+
                     <span>Home</span></a>
             </li>
 
@@ -82,7 +82,7 @@
                     <span>Humedad</span></a>
             </li>
 
-         
+
             <li class="nav-item">
                 <a class="nav-link" href="rendimientoAcademico.html">
                     <i class="bi bi-bar-chart"></i>
@@ -96,7 +96,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            
+
         </ul>
         <!-- End of Sidebar -->
 
@@ -112,19 +112,19 @@
                     <div class="ml-md-3">
                         <span class="h4">Mediciones de temperatura</span>
                     </div>
-                    
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <button class="switch" id="switch">
-                            <span><i class="fas fa-sun" ></i></span>
+                            <span><i class="fas fa-sun"></i></span>
                             <span><i class="fas fa-moon"></i></span>
-                        </button>           
+                        </button>
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline small">Representante</span>
                                 <img class="img-profile rounded-circle" src="img/avatarRepresentante.png" />
                             </a>
@@ -137,20 +137,16 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                   
-
-                    <!-- Content Row -->
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-
+                    <div class="ful-card" id="fulCardBox">
+                        <iframe id="fulCard"
+                                src=""
+                                frameborder="0" height="525" width="1025" allowtransparency></iframe>
+                        <span id="btnClose"><i class="bi bi-x-circle"></i></span>
                     </div>
-
-
+                    <!-- cards -->
+                    <div class="row" id="row">     
+                        
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -177,6 +173,30 @@
     <a href="#wrapper" target="">
         <img class="btn-back" id="btn-back" src="img/btn-back.png">
     </a>
+    <script>
+        //genero los elementos para mostrar los graficos
+        const urls = ["https://pp1.ath.cx:8443/public/question/ae38a0e4-7d58-4102-bd80-607597c7d9fb", "https://pp1.ath.cx:8443/public/question/70de7875-e5d8-4134-b613-6da5c7e6e509", "https://pp1.ath.cx:8443/public/question/a5947831-7b1d-409c-9a1f-848cfb0bfed1"];
+        const card = document.getElementById("row");
+        var counter = 0;
+        for (let index = 0; index < urls.length; index++) {
+            src = urls[index];
+            if (counter == 0 || counter == 3) {
+                card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
+                counter++;
+                continue;
+            }
+            if (counter == 1 || counter == 2) {
+                card.innerHTML += "<div class='col-xl-5 col-lg-4'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
+                counter++;
+                continue;
+            }
+            if (counter == 4) {
+                card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
+                counter = 1;
+                continue;
+            }
+        }
+    </script>
 
     <script src="js/script.js"></script>
 </body>
