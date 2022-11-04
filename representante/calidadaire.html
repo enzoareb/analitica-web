@@ -175,30 +175,7 @@
     <a href="#wrapper" target="">
         <img class="btn-back" id="btn-back" src="img/btn-back.png">
     </a>
-    <script>
-        //genero los elementos para mostrar los graficos
-        const urls = ["https://pp1.ath.cx:8443/public/question/d1be80e4-67bb-471b-b073-8cfb6e1d6896"];
-        const card = document.getElementById("row");
-        var counter = 0;
-        for (let index = 0; index < urls.length; index++) {
-            src = urls[index];
-            if (counter == 0 || counter == 3) {
-                card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
-                counter++;
-                continue;
-            }
-            if (counter == 1 || counter == 2) {
-                card.innerHTML += "<div class='col-xl-5 col-lg-4'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
-                counter++;
-                continue;
-            }
-            if (counter == 4) {
-                card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
-                counter = 1;
-                continue;
-            }
-        }
-    </script>
+    
     <script src="js/script.js"></script>
 
 
