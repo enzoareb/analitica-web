@@ -49,7 +49,7 @@ const urlRendimiento = ["https://pp1.ath.cx:8443/public/question/d9b0fbe7-6ab3-4
 const urlAhorro = [];
 
 switch (pathname) {
-    case "/alumno/index.html" || "/index.html" || "":
+    case "/alumno/index.html" || "/index.html" :
         urls = urlIndex;
         break;
     case "/alumno/alumnos.html" || "/alumnos.html":
@@ -61,7 +61,7 @@ switch (pathname) {
     case "/alumno/ahorroenergetico.html" || "/ahorroenergetico.html":
         urls = urlAhorro;
     default:
-        urls = [];
+        urls = urlIndex;
         break;
 }
 

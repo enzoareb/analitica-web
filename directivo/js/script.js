@@ -49,7 +49,7 @@ const urlTemperatura = ["https://pp1.ath.cx:8443/public/question/6fd8fbca-093b-4
 const urlRuido = ["https://pp1.ath.cx:8443/public/question/164e7709-d178-4e48-8ad9-9cc802e0809b","https://pp1.ath.cx:8443/public/question/3d070573-6f44-4255-ae39-af36f915a013","https://pp1.ath.cx:8443/public/question/7115bdb6-3d8a-4aef-a40d-c3e86705d387","https://pp1.ath.cx:8443/public/question/dd952ee8-cfdc-44e0-a2d4-176b58309a87"];
 
 switch (pathname) {
-    case "/directivo/index.html" || "/index.html" || "":
+    case "/directivo/index.html" || "/index.html":
         urls = urlIndex;
         break;
     case "/directivo/alumnos.html" || "/alumnos.html":
@@ -74,7 +74,7 @@ switch (pathname) {
         urls = urlTemperatura;
         break;
     default:
-        urls = [];
+        urls = urlIndex;
         break;
 }
 
