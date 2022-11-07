@@ -77,13 +77,13 @@ switch (pathname) {
     case "/alumnos.html":
         urls = urlAlumnos;
         break;
-    case "rendimientoAcademico.html":
+    case "/rendimientoAcademico.html":
         urls = urlRendimiento;
         break;
     case "/calidadaire.html":
         urls = urlCalidadAire;
         break;
-    case "humedad.html":
+    case "/humedad.html":
         urls = urlHumedad;
         break;
     case "/ruido.html":
