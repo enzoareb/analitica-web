@@ -3,19 +3,6 @@ fullCard = document.getElementById("fulCard");
 var body = document.getElementById("page-top");
 const btnBack = document.getElementById("btn-back");
 
-////////////////evento close full card//////////////////////////////////
-
-const btnClose = document.querySelector("#btnClose");
-
-btnClose.addEventListener('click', () => {
-    //escondo full card
-    fullCardBox.style.display = "none";
-    //saco la url de la full card
-    fullCard.src = "";
-    //habilito scroll de la pagina
-    body.style.position = "relative";
-});
-
 ////////////////evento boton contraste/////////////////////////////////
 
 const btnSwitch = document.querySelector("#switch");
@@ -48,34 +35,18 @@ if (localStorage.getItem('theme') == 'dark') {
     btnBack.src = "img/btn-back.png"
 }
 
-///////////evento full card///////////////////////////
-
-var buttons = document.getElementsByClassName("icon");
-
-for (let index = 0; index < buttons.length; index++) {
-    button = buttons[index];
-    button.addEventListener('click', () => {
-        var iframes = document.getElementsByClassName("iframe");
-        var srcIframe = iframes[index].getAttribute("src");
-        fullCard.src = srcIframe;
-        fullCardBox.style.display = "flex";
-
-    });
-
-}
-
 ///////////////////////////////////////////////////////
 
 var pathname = window.location.pathname;
 var urls;
-const urlIndex = ["https://pp1.ath.cx:8443/public/question/d1be80e4-67bb-471b-b073-8cfb6e1d6896", "https://pp1.ath.cx:8443/public/question/3bca1b9f-0526-4e1b-85ba-60a765de27e2", "https://pp1.ath.cx:8443/public/question/b78f6bee-7671-4fc8-8d72-8c1f2624104b", "https://pp1.ath.cx:8443/public/question/ae38a0e4-7d58-4102-bd80-607597c7d9fb", "https://pp1.ath.cx:8443/public/question/67b05ad7-6a37-4743-8afc-825763b13c3c", "https://pp1.ath.cx:8443/public/question/a5947831-7b1d-409c-9a1f-848cfb0bfed1", "https://pp1.ath.cx:8443/public/question/d9b0fbe7-6ab3-40d7-b5c4-6823d2fd8db6", "https://pp1.ath.cx:8443/public/question/62fb7df7-8e67-4e9b-ba05-275ca77b1c79", "https://pp1.ath.cx:8443/public/question/d206d74e-11f3-490d-a069-e7df88deba8d", "https://pp1.ath.cx:8443/public/question/1a24b1d7-0d2b-4007-9945-ad44940cee0c", "https://pp1.ath.cx:8443/public/question/70de7875-e5d8-4134-b613-6da5c7e6e509", "https://pp1.ath.cx:8443/public/question/e9490684-d668-4d00-915f-7d4859a3555e", "https://pp1.ath.cx:8443/public/question/214553bb-2e78-4250-ab2a-c8734ef0762d", "https://pp1.ath.cx:8443/public/question/aa8ba0c5-0f5e-40cb-addf-5e15395acc96"];
+const urlIndex = ["https://pp1.ath.cx:8443/public/question/3bca1b9f-0526-4e1b-85ba-60a765de27e2", "https://pp1.ath.cx:8443/public/question/b78f6bee-7671-4fc8-8d72-8c1f2624104b", "https://pp1.ath.cx:8443/public/question/ae38a0e4-7d58-4102-bd80-607597c7d9fb","https://pp1.ath.cx:8443/public/question/0b328a8f-a375-4359-89a8-5ce0edcbe11f","https://pp1.ath.cx:8443/public/question/d5935bc3-2b4b-4b07-9639-6313ff0afb60","https://pp1.ath.cx:8443/public/question/cc804e6e-b813-4704-8e12-46a65d6c75e9","https://pp1.ath.cx:8443/public/question/1afe9c60-b66f-4abf-9e92-9841b01bf6af","https://pp1.ath.cx:8443/public/question/86a51d79-08d6-4d8f-ace2-607961566cbf","https://pp1.ath.cx:8443/public/question/f4477491-a1ec-4c7e-9c98-6c5913fb2af8","https://pp1.ath.cx:8443/public/question/16d49253-0d11-4f8a-b06a-16f6b401d762","https://pp1.ath.cx:8443/public/question/62583e95-8add-463d-897b-b5f78132f232", "https://pp1.ath.cx:8443/public/question/a5947831-7b1d-409c-9a1f-848cfb0bfed1","https://pp1.ath.cx:8443/public/question/164e7709-d178-4e48-8ad9-9cc802e0809b","https://pp1.ath.cx:8443/public/question/3d070573-6f44-4255-ae39-af36f915a013","https://pp1.ath.cx:8443/public/question/7115bdb6-3d8a-4aef-a40d-c3e86705d387","https://pp1.ath.cx:8443/public/question/dd952ee8-cfdc-44e0-a2d4-176b58309a87","https://pp1.ath.cx:8443/public/question/6fd8fbca-093b-4016-81df-68173f1ecc89","https://pp1.ath.cx:8443/public/question/f543ea9d-5ab5-4724-8755-669cece99abc","https://pp1.ath.cx:8443/public/question/6650bd24-b901-4fe7-b69d-070fc78d8e2b","https://pp1.ath.cx:8443/public/question/ba6cf25f-2296-4999-b806-a2910b955723" ,"https://pp1.ath.cx:8443/public/question/d9b0fbe7-6ab3-40d7-b5c4-6823d2fd8db6", "https://pp1.ath.cx:8443/public/question/70de7875-e5d8-4134-b613-6da5c7e6e509", "https://pp1.ath.cx:8443/public/question/214553bb-2e78-4250-ab2a-c8734ef0762d", "https://pp1.ath.cx:8443/public/question/aa8ba0c5-0f5e-40cb-addf-5e15395acc96", "https://pp1.ath.cx:8443/public/question/62fb7df7-8e67-4e9b-ba05-275ca77b1c79","https://pp1.ath.cx:8443/public/question/d9b0fbe7-6ab3-40d7-b5c4-6823d2fd8db6", "https://pp1.ath.cx:8443/public/question/62fb7df7-8e67-4e9b-ba05-275ca77b1c79"];
 const urlAlumnos = ["https://pp1.ath.cx:8443/public/question/3bca1b9f-0526-4e1b-85ba-60a765de27e2", "https://pp1.ath.cx:8443/public/question/b78f6bee-7671-4fc8-8d72-8c1f2624104b", "https://pp1.ath.cx:8443/public/question/ae38a0e4-7d58-4102-bd80-607597c7d9fb", "https://pp1.ath.cx:8443/public/question/a5947831-7b1d-409c-9a1f-848cfb0bfed1", "https://pp1.ath.cx:8443/public/question/d9b0fbe7-6ab3-40d7-b5c4-6823d2fd8db6", "https://pp1.ath.cx:8443/public/question/62fb7df7-8e67-4e9b-ba05-275ca77b1c79"];
 const urlRendimiento = ["https://pp1.ath.cx:8443/public/question/d9b0fbe7-6ab3-40d7-b5c4-6823d2fd8db6", "https://pp1.ath.cx:8443/public/question/70de7875-e5d8-4134-b613-6da5c7e6e509", "https://pp1.ath.cx:8443/public/question/214553bb-2e78-4250-ab2a-c8734ef0762d", "https://pp1.ath.cx:8443/public/question/aa8ba0c5-0f5e-40cb-addf-5e15395acc96", "https://pp1.ath.cx:8443/public/question/62fb7df7-8e67-4e9b-ba05-275ca77b1c79"];
 const urlAhorro = [];
-const urlCalidadAire = ["https://pp1.ath.cx:8443/public/question/d1be80e4-67bb-471b-b073-8cfb6e1d6896"];
-const urlHumedad = ["https://pp1.ath.cx:8443/public/question/45d0a206-cdfc-4a00-832c-4b71534bbc22", "https://pp1.ath.cx:8443/public/question/1a24b1d7-0d2b-4007-9945-ad44940cee0c"];
-const urlRuido = ["https://pp1.ath.cx:8443/public/question/67b05ad7-6a37-4743-8afc-825763b13c3c"];
-const urlTemperatura = ["https://pp1.ath.cx:8443/public/question/d206d74e-11f3-490d-a069-e7df88deba8d", "https://pp1.ath.cx:8443/public/question/1a24b1d7-0d2b-4007-9945-ad44940cee0c", "https://pp1.ath.cx:8443/public/question/e9490684-d668-4d00-915f-7d4859a3555e"];
+const urlCalidadAire = ["https://pp1.ath.cx:8443/public/question/0b328a8f-a375-4359-89a8-5ce0edcbe11f","https://pp1.ath.cx:8443/public/question/d5935bc3-2b4b-4b07-9639-6313ff0afb60","https://pp1.ath.cx:8443/public/question/cc804e6e-b813-4704-8e12-46a65d6c75e9","https://pp1.ath.cx:8443/public/question/62583e95-8add-463d-897b-b5f78132f232"];
+const urlHumedad = ["https://pp1.ath.cx:8443/public/question/1afe9c60-b66f-4abf-9e92-9841b01bf6af","https://pp1.ath.cx:8443/public/question/86a51d79-08d6-4d8f-ace2-607961566cbf","https://pp1.ath.cx:8443/public/question/f4477491-a1ec-4c7e-9c98-6c5913fb2af8","https://pp1.ath.cx:8443/public/question/16d49253-0d11-4f8a-b06a-16f6b401d762"];
+const urlTemperatura = ["https://pp1.ath.cx:8443/public/question/6fd8fbca-093b-4016-81df-68173f1ecc89","https://pp1.ath.cx:8443/public/question/f543ea9d-5ab5-4724-8755-669cece99abc","https://pp1.ath.cx:8443/public/question/6650bd24-b901-4fe7-b69d-070fc78d8e2b","https://pp1.ath.cx:8443/public/question/ba6cf25f-2296-4999-b806-a2910b955723"];
+const urlRuido = ["https://pp1.ath.cx:8443/public/question/164e7709-d178-4e48-8ad9-9cc802e0809b","https://pp1.ath.cx:8443/public/question/3d070573-6f44-4255-ae39-af36f915a013","https://pp1.ath.cx:8443/public/question/7115bdb6-3d8a-4aef-a40d-c3e86705d387","https://pp1.ath.cx:8443/public/question/dd952ee8-cfdc-44e0-a2d4-176b58309a87"];
 
 switch (pathname) {
     case "/directivo/index.html":
@@ -128,3 +99,31 @@ for (let index = 0; index < urls.length; index++) {
     }
 }
 
+///////////evento full card///////////////////////////
+
+var buttons = document.getElementsByClassName("icon");
+
+for (let index = 0; index < buttons.length; index++) {
+    button = buttons[index];
+    button.addEventListener('click', () => {
+        var iframes = document.getElementsByClassName("iframe");
+        var srcIframe = iframes[index].getAttribute("src");
+        fullCard.src = srcIframe;
+        fullCardBox.style.display = "flex";
+        body.style.position = "fixed";
+    });
+
+}
+
+////////////////evento close full card//////////////////////////////////
+
+const btnClose = document.querySelector("#btnClose");
+
+btnClose.addEventListener('click', () => {
+    //escondo full card
+    fullCardBox.style.display = "none";
+    //saco la url de la full card
+    fullCard.src = "";
+    //habilito scroll de la pagina
+    body.style.position = "relative";
+});
