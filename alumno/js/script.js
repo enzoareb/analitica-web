@@ -60,7 +60,8 @@ switch (pathname) {
         break;
     case "/alumno/ahorroenergetico.html":
         urls = urlAhorro;
-        case "/index.html" :
+        break;
+    case "/index.html":
         urls = urlIndex;
         break;
     case "/alumnos.html":
@@ -71,6 +72,7 @@ switch (pathname) {
         break;
     case "/ahorroenergetico.html":
         urls = urlAhorro;
+        break;
     default:
         urls = urlIndex;
         break;
