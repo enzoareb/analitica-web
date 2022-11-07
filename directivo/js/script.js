@@ -49,28 +49,28 @@ const urlTemperatura = ["https://pp1.ath.cx:8443/public/question/6fd8fbca-093b-4
 const urlRuido = ["https://pp1.ath.cx:8443/public/question/164e7709-d178-4e48-8ad9-9cc802e0809b","https://pp1.ath.cx:8443/public/question/3d070573-6f44-4255-ae39-af36f915a013","https://pp1.ath.cx:8443/public/question/7115bdb6-3d8a-4aef-a40d-c3e86705d387","https://pp1.ath.cx:8443/public/question/dd952ee8-cfdc-44e0-a2d4-176b58309a87"];
 
 switch (pathname) {
-    case "/directivo/index.html":
+    case "/directivo/index.html" || "/index.html" || "":
         urls = urlIndex;
         break;
-    case "/directivo/alumnos.html":
+    case "/directivo/alumnos.html" || "/alumnos.html":
         urls = urlAlumnos;
         break;
-    case "/directivo/rendimientoAcademico.html":
+    case "/directivo/rendimientoAcademico.html" || "/rendimientoAcademico.html":
         urls = urlRendimiento;
         break;
-    case "/directivo/ahorroenergetico.html":
+    case "/directivo/ahorroenergetico.html" || "/ahorroenergetico.html":
         urls = urlAhorro;
         break;
-    case "/directivo/calidadaire.html":
+    case "/directivo/calidadaire.html" || "/calidadaire.html":
         urls = urlCalidadAire;
         break;
-    case "/directivo/humedad.html":
+    case "/directivo/humedad.html" || "/humedad.html":
         urls = urlHumedad;
         break;
-    case "/directivo/ruido.html":
+    case "/directivo/ruido.html" || "/ruido.html": 
         urls = urlRuido;
         break;
-    case "/directivo/temperatura.html":
+    case "/directivo/temperatura.html" || "/temperatura.html":
         urls = urlTemperatura;
         break;
     default:

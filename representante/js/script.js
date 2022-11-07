@@ -50,25 +50,25 @@ const urlTemperatura = ["https://pp1.ath.cx:8443/public/question/6fd8fbca-093b-4
 const urlRuido = ["https://pp1.ath.cx:8443/public/question/164e7709-d178-4e48-8ad9-9cc802e0809b","https://pp1.ath.cx:8443/public/question/3d070573-6f44-4255-ae39-af36f915a013","https://pp1.ath.cx:8443/public/question/7115bdb6-3d8a-4aef-a40d-c3e86705d387","https://pp1.ath.cx:8443/public/question/dd952ee8-cfdc-44e0-a2d4-176b58309a87"];
 
 switch (pathname) {
-    case "/representante/index.html":
+    case "/representante/index.html" || "/index.html" || "":
         urls = urlIndex;
         break;
-    case "/representante/alumnos.html":
+    case "/representante/alumnos.html" || "/alumnos.html":
         urls = urlAlumnos;
         break;
-    case "/representante/rendimientoAcademico.html":
+    case "/representante/rendimientoAcademico.html" || "rendimientoAcademico.html":
         urls = urlRendimiento;
         break;
-    case "/representante/calidadaire.html":
+    case "/representante/calidadaire.html" || "/calidadaire.html":
         urls = urlCalidadAire;
         break;
-    case "/representante/humedad.html":
+    case "/representante/humedad.html" || "humedad.html":
         urls = urlHumedad;
         break;
-    case "/representante/ruido.html":
+    case "/representante/ruido.html" || "/ruido.html":
         urls = urlRuido;
         break;
-    case "/representante/temperatura.html":
+    case "/representante/temperatura.html" || "/temperatura.html":
         urls = urlTemperatura;
         break;
     default:
