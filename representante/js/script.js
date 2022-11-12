@@ -1,24 +1,9 @@
 const fullCardBox = document.getElementById("fulCardBox");
-fullCard = document.getElementById("fulCard");
-var body = document.getElementById("page-top");
+const fullCard = document.getElementById("fulCard");
+const body = document.getElementById("page-top");
 const btnBack = document.getElementById("btn-back");
-
-
-////////////////evento boton contraste/////////////////////////////////
-
 const btnSwitch = document.querySelector("#switch");
-
-btnSwitch.addEventListener('click', () => {
-    let switchToTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-    setTheme(switchToTheme);
-
-    //cambiar color btn flotante
-    if (switchToTheme == 'dark') {
-        btnBack.src = "img/btn-back-dark.png"
-    } else {
-        btnBack.src = "img/btn-back.png"
-    }
-});
+const btnClose = document.querySelector("#btnClose");
 
 const preferedColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 //guardar tema en localstorage
@@ -31,11 +16,10 @@ setTheme(localStorage.getItem('theme') || preferedColorScheme);
 
 //seteo color boton flotante
 if (localStorage.getItem('theme') == 'dark') {
-    btnBack.src = "img/btn-back-dark.png"
+    btnBack.src = "img/btn-back-dark.png";
 } else {
-    btnBack.src = "img/btn-back.png"
+    btnBack.src = "img/btn-back.png";
 }
-
 
 ///////////////////////////////////////////////////////
 
@@ -97,26 +81,24 @@ switch (pathname) {
         break;
 }
 
-const card = document.getElementById("row");
-var counter = 0;
-for (let index = 0; index < urls.length; index++) {
-    src = urls[index];
-    if (counter == 0 || counter == 3) {
-        card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
-        counter++;
-        continue;
+cargarIframes();
+
+////////////////evento boton contraste/////////////////////////////////
+
+btnSwitch.addEventListener('click', () => {
+    location.reload();
+    let switchToTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    setTheme(switchToTheme);
+
+    //cambiar colores
+    if (switchToTheme == 'dark') {
+        btnBack.src = "img/btn-back-dark.png";
+    } else {
+        btnBack.src = "img/btn-back.png";
+
     }
-    if (counter == 1 || counter == 2) {
-        card.innerHTML += "<div class='col-xl-5 col-lg-4'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
-        counter++;
-        continue;
-    }
-    if (counter == 4) {
-        card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
-        counter = 1;
-        continue;
-    }
-}
+
+});
 
 ///////////evento full card///////////////////////////
 
@@ -136,8 +118,6 @@ for (let index = 0; index < buttons.length; index++) {
 
 ////////////////evento close full card//////////////////////////////////
 
-const btnClose = document.querySelector("#btnClose");
-
 btnClose.addEventListener('click', () => {
     //escondo full card
     fullCardBox.style.display = "none";
@@ -146,3 +126,33 @@ btnClose.addEventListener('click', () => {
     //habilito scroll de la pagina
     body.style.position = "relative";
 });
+
+
+function cargarIframes() {
+
+    var counter = 0;
+
+    for (let index = 0; index < urls.length; index++) {
+        const card = document.getElementById("row");
+        if (localStorage.getItem('theme') == 'dark') {
+            src = urls[index] + "#theme=night";
+        } else {
+            src = urls[index];
+        }
+        if (counter == 0 || counter == 3) {
+            card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
+            counter++;
+            continue;
+        }
+        if (counter == 1 || counter == 2) {
+            card.innerHTML += "<div class='col-xl-5 col-lg-4'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
+            counter++;
+            continue;
+        }
+        if (counter == 4) {
+            card.innerHTML += "<div class='col-xl-7 col-lg-6'><div class='card shadow mb-4'><i class='fas fa-expand icon' id='boton'></i><iframe class='iframe' src=" + src + " frameborder='0' height='450' allowtransparency></iframe></div></div>";
+            counter = 1;
+            continue;
+        }
+    }
+}
